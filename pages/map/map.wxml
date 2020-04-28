@@ -1,0 +1,22 @@
+<!--pages/map/map.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">导航</view>
+</cu-custom>
+<!-- 这是地图部分 -->
+<view class="map_container">
+  <map class='map' longitude='{{longitude}}' latitude='{{latitude}}' scale='{{scale}}' markers='{{markers}}' controls="{{controls}}" bindcontroltap="bindcontroltap" polyline='{{polyline}}' circles="{{circles}}" bindmarkertap='bindmarkertap' bindcontroltap='bindcontroltap'
+    show-location></map>
+</view>
+<!-- 以下是导航部分 -->
+<view class='list-guide'>
+  <!-- 这里的坐标本应该是从服务器获取数据的,这时丈先写死在页面上了 -->
+  <view bindtap="onGuideTap" data-latitude='35.41488' data-longitude='114.066224' data-bankName='新乡医学院'>
+    <image src='/images/mine_daohang.png' class='list-guide-imgae'></image>
+    <text class='list-guide-text'>导航</text>
+  </view>
+  <view bindtap='onbankTap' data-bankId="{{item.BANK_ID}}">
+    <image src='/images/mine_dingdan.png' class='list-guide-imgae'></image>
+    <text class='list-guide-text'>详情</text>
+  </view>
+</view>

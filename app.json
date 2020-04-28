@@ -1,0 +1,63 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/empower/empower",
+    "pages/bindleader/bindleader",
+    "pages/empowerPhone/empowerPhone",
+    "pages/address/address",
+    "pages/goods/goods",
+    "pages/invite/invite",
+    "pages/order/order",
+    "pages/team/team",
+    "pages/user/user",
+    "pages/integral/integral",
+    "pages/auth/auth",
+    "pages/map/map"
+  ],
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/sy.png",
+        "selectedIconPath": "images/sy1.png"
+      },
+      {
+        "pagePath": "pages/team/team",
+        "text": "我的团队",
+        "iconPath": "images/td.png",
+        "selectedIconPath": "images/td1.png"
+      },
+      {
+        "pagePath": "pages/invite/invite",
+        "text": "邀请好友",
+        "iconPath": "images/yq.png",
+        "selectedIconPath": "images/yq1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/wd.png",
+        "selectedIconPath": "images/wd1.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "卓越助手",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,53 @@
+<!--pages/integral/integral.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">积分兑换</view>
+</cu-custom>
+<!-- 积分 -->
+<view class="bg-blue padding back light"></view>
+<view class="bg-white integral">
+  <view>
+    <text>我的积分</text>
+    <text>{{jifens}}</text>
+  </view>
+  <view>
+    <text>待审核积分</text>
+    <text>{{datas}}</text>
+  </view>
+</view>
+<!-- 表单 -->
+<!-- 姓名 -->
+<form bindsubmit="formSubmit">
+  <view class="cu-form-group">
+    <view class="title" style="color:{{color1}}">姓名</view>
+    <input placeholder="请输入收款人姓名" name="user1" value='{{user1}}'></input>
+  </view>
+  <!-- 电话 -->
+  <view class="cu-form-group">
+    <view class="title" style="color:{{color2}}">收款人电话</view>
+    <input placeholder="请输入真实的收款人电话" name="user2" value='{{user2}}'></input>
+  </view>
+  <!-- 账户 -->
+  <view class="cu-form-group">
+    <view class="title" style="color:{{color3}}">提现账户</view>
+    <input placeholder="请输入银行卡号或支付宝账号" name="user3" value='{{user3}}'></input>
+  </view>
+  <!-- 提现 -->
+  <view class="cu-form-group">
+    <view class="title" style="color:{{color4}}">提现金额</view>
+    <input placeholder="请输入提现金额" name="user4" value='{{user4}}'></input>
+  </view>
+  <!-- 到账 -->
+  <view class="cu-form-group">
+    <view class="title">实际到账</view>
+    <input disabled="disabled" value="{{user5}}"></input>
+  </view>
+  <!-- 注释 -->
+  <view class="flex solid-bottom padding justify-end">
+    <text>注：提现每笔扣除{{bili}}%手续费</text>
+  </view>
+  <!-- 提交按钮 -->
+  <view class="flex solid-bottom padding justify-center">
+    <button class="bg-gradual-blue solid" formType="submit">提交申请</button>
+  </view>
+</form>

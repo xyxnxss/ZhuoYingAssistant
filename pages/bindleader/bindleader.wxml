@@ -1,0 +1,15 @@
+<!--pages/bindleader/bindleader.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">加入我们</view>
+</cu-custom>
+<!-- 信息 -->
+<view class="wrap">
+  <view class="wrap_cen">
+    <text class="title">加入我们</text>
+    <view class="wrap_img">
+      <image src="{{userinfo.photo}}"></image>
+    </view>
+    <text>{{userinfo.name}}</text>
+    <button class="bg-gradual-blue but" bindtap="but">确认提交</button>
+  </view>
+</view>

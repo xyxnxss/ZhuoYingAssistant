@@ -1,0 +1,12 @@
+<!--pages/empower/empower.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">授权登录</view>
+</cu-custom>
+<view class="wrap">
+  <view class="wrap_cen">
+    <image src='/images/wx.png' class="img"></image>
+    <text class="blo">微信授权页面</text>
+    <text>此页面是微信授权页面，点击下方按钮弹出授权或跳转页面</text>
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="but">点击微信授权</button>
+  </view>
+</view>

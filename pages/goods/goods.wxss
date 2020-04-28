@@ -1,0 +1,91 @@
+/* pages/goods/goods.wxss */
+
+.tower-swiper .tower-item {
+  transform: scale(calc(0.5 + var(--index) / 10));
+  margin-left: calc(var(--left) * 100rpx - 150rpx);
+  z-index: var(--index);
+}
+
+.screen-swiper {
+  min-height: 600rpx;
+}
+
+.wrap {
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap>text {
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.wrap_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrap_title>text+text {
+  color: gray;
+}
+
+.wrap_title text:first-child {
+  color: red;
+}
+
+.cu-form-group view {
+  color: gray;
+}
+
+.cu-form-group input {
+  color: black;
+}
+
+.but {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+}
+
+.but button {
+  border-radius: 0rpx;
+}
+
+.xl_wrap {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.xl_img {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.xl_flex {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  align-self: flex-end;
+}
+
+.xl_flex text {
+  margin: 5rpx;
+}
+
+.xl_t1 {
+  font-size: 35rpx;
+}
+
+.xl_t2 {
+  color: red;
+}
+
+.xl_t3 {
+  color: gray;
+  font-size: 25rpx;
+}
+
+.shu {
+  margin: auto 0;
+}

@@ -1,0 +1,13 @@
+<!--pages/invite/invite.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">邀请好友</view>
+</cu-custom>
+<!-- 邀请 -->
+<view class="wrap">
+  <text class="titie">好友召集令</text>
+  <view class="blo">
+    <text>邀请码</text>
+    <image src="{{imgma}}" class="ma_img"></image>
+    <text class="ma">邀请好友扫一扫</text>
+  </view>
+</view>

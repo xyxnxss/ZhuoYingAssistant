@@ -1,0 +1,74 @@
+<!--pages/goods/goods.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">商品详情</view>
+</cu-custom>
+<!-- 轮播 -->
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{pro.img_arr}}" wx:key='key'>
+    <image src="{{item}}" mode="aspectFill"></image>
+    <video src="{{item}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover"></video>
+  </swiper-item>
+</swiper>
+<!-- 详情 -->
+<view class="wrap">
+  <text>{{pro.name}}</text>
+  <view class="wrap_title">
+    <text>￥ {{pro.price_yh}}</text>
+    <text>库存：{{pro.num}}</text>
+  </view>
+</view>
+<!-- 标签页 -->
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{scor}}" wx:key="key" bindtap="tabSelect" data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </view>
+</scroll-view>
+<!-- 表单 -->
+<view wx:if='{{index1}}'>
+  <rich-text nodes="{{pro.content}}"></rich-text>
+</view>
+<view wx:if='{{index2}}' class="padding margin-bottom-sm">
+  <view class="flex  p-xs margin-bottom-sm mb-sm">
+    <view class="flex-sub  padding-sm margin-xs ">商品名称：</view>
+    <view class="flex-twice  padding-sm margin-xs ">{{pro.name}}</view>
+  </view>
+  <view class="flex  p-xs margin-bottom-sm mb-sm">
+    <view class="flex-sub  padding-sm margin-xs ">商品编号：</view>
+    <view class="flex-twice  padding-sm margin-xs ">{{pro.id}}</view>
+  </view>
+  <view class="flex  p-xs margin-bottom-sm mb-sm">
+    <view class="flex-sub  padding-sm margin-xs ">分类：</view>
+    <view class="flex-twice  padding-sm margin-xs ">{{pro.cat_name}}</view>
+  </view>
+</view>
+<!-- 弹出框 -->
+<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white">
+      <view class="action text-blue" bindtap="hideModal">取消</view>
+      <view class="action text-green" bindtap="hide">确定</view>
+    </view>
+    <view class="padding-xl">
+      <view class="xl_wrap">
+        <image src="{{pro.photo_x}}" class="xl_img"></image>
+        <view class="xl_flex">
+          <text class="xl_t1">{{pro.name}}</text>
+          <text class="xl_t2">￥ {{pro.price_yh}}</text>
+          <text class="xl_t3">库存：{{pro.num}}</text>
+        </view>
+      </view>
+      <!-- 步进器 -->
+      <view class="flex solid-bottom padding justify-between">
+        <text class="shu">购买数量</text>
+        <van-stepper value="{{ values }}" bind:change="onChange" />
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 按钮 -->
+<view class="flex flex-direction but">
+  <button class="cu-btn bg-gradual-blue lg" bindtap="showModal" data-target="bottomModal">立即购买</button>
+</view>

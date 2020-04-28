@@ -1,0 +1,45 @@
+/* pages/empower/empower.wxss */
+
+.wrap {
+  display: flex;
+  height: 80vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.wrap_cen {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 100rpx;
+}
+
+.img {
+  width: 180rpx;
+  height: 180rpx;
+  margin-bottom: 80rpx;
+}
+
+.blo {
+  font-size: 30rpx;
+  color: black;
+  margin-bottom: 80rpx;
+}
+
+.wrap text {
+  margin-bottom: 80rpx;
+}
+
+.wrap text~text {
+  font-size: 30rpx;
+  color: rgb(201, 200, 200);
+}
+
+.but {
+  border: 1px solid #07c160;
+  background-color: white;
+  color: #07c160;
+  font-size: 30rpx;
+  padding: 5rpx 60rpx;
+}

@@ -1,0 +1,13 @@
+/* pages/team/team.wxss */
+
+.title {
+  text-align: center;
+  border: 1rpx solid gainsboro;
+  padding: 30rpx;
+  color: gray;
+}
+
+.t_img {
+  width: 100%;
+  height: 100%;
+}

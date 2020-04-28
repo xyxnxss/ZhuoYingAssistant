@@ -1,0 +1,32 @@
+/* pages/address/address.wxss */
+
+.warp {
+  height: 1000rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cu-form-group {
+  width: 650rpx;
+}
+
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}
+
+.cu-form-group input {
+  font-size: 30rpx;
+}
+
+.cu-form-group textarea {
+  font-size: 30rpx;
+}
+
+.butt {
+  position: fixed;
+  bottom: 50rpx;
+  width: 650rpx;
+}
+.butt button{
+  width: 100%
+}

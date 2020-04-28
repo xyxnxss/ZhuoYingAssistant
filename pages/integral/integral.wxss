@@ -1,0 +1,37 @@
+/* pages/integral/integral.wxss */
+
+.back {
+  height: 250rpx;
+}
+
+.integral {
+  background-image: url(https://up.huicheimg.com/edpic/2b/cd/94/2bcd944a40e85a34f2e904f4461e163f.jpg);
+  background-size: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 13% 0%;
+  margin: -150rpx 50rpx 50rpx 50rpx;
+}
+
+.integral view {
+  display: flex;
+  flex-direction: column;
+}
+
+.integral view>text {
+  padding-bottom: 30rpx;
+  color: black;
+  font-size: 30rpx;
+}
+
+.cu-form-group .title {
+  min-width: calc(4em + 60rpx);
+}
+
+.cu-form-group input {
+  font-size: 25rpx;
+}
+
+.butsq {
+  padding: 20rpx;
+}

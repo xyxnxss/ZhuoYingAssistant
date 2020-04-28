@@ -1,0 +1,20 @@
+<!--pages/auth/auth.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">地址列表</view>
+</cu-custom>
+<!-- 列表 -->
+<view class="wrap" wx:for='{{adds}}'wx:key='key'>
+<view class="list">
+<text>姓名：{{item.name}}</text>
+<text>手机号：{{item.tel}}</text>
+<text>详细地址：{{item.address}}</text>
+</view>
+<view class="but">
+<button data-id="{{item.id}}" bindtap="but">删除</button>
+<button data-id="{{item.id}}" bindtap="buts">默认</button>
+</view>
+</view>
+<view class="butt">
+  <button class="cu-btn bg-gradual-blue" bindtap="butt" formType="submit">添加地址</button>
+</view>

@@ -1,0 +1,60 @@
+/* pages/order/order.wxss */
+
+.wrap {
+  padding: 30rpx;
+}
+
+.xl_wrap {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.xl_img {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.xl_flex {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  align-self: flex-end;
+}
+
+.xl_flex text {
+  margin: 5rpx;
+}
+
+.xl_t2 {
+  color: red;
+}
+
+.jine {
+  margin: 30rpx;
+}
+
+.jine text {
+  font-weight: bold;
+  color: red;
+  font-size: 35rpx;
+}
+
+.diz {
+  margin: 50rpx 0;
+  display: flex;
+  align-items: center;
+}
+
+.diz_img {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+}
+.list text{
+  margin: 5rpx;
+  font-size: 25rpx;
+}

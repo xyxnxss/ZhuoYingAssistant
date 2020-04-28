@@ -1,0 +1,45 @@
+/* pages/auth/auth.wxss */
+.wrap{
+  margin: 20rpx;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid gainsboro;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+}
+.list text{
+  margin: 10rpx;
+  font-size: 30rpx;
+}
+.but{
+  display: flex;
+  align-items: center;
+}
+.but button{
+  margin: 10rpx;
+  width: 130rpx;
+  height: 80rpx;
+  border: red;
+  background-color: white;
+  color: red;
+  font-size: 30rpx;
+  text-align: center;
+}
+.but button~button{
+  border: forestgreen;
+  color: forestgreen;
+}
+
+.butt {
+  position: fixed;
+  bottom: 50rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.butt button{
+  width: 650rpx;
+}

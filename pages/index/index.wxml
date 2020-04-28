@@ -1,0 +1,33 @@
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">卓越助手</view>
+</cu-custom>
+<!-- 轮播 -->
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{ggtop}}" wx:key='key'>
+    <image src="{{item.photo}}" mode="aspectFill"></image>
+    <video src="{{item.photo}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover"></video>
+  </swiper-item>
+</swiper>
+<!-- 卡片 -->
+<view class="card">
+  <view wx:for='{{prolist}}' wx:key='key' data-index="{{item.id}}" bindtap="urls" class="prolist">
+    <view class='card_img'>
+      <image src='{{item.photo_x}}' mode='widthFix'></image>
+    </view>
+    <view class="wrap">
+      <view class="van-ellipsis name">{{item.name}}</view>
+      <view class="card_m">
+        <text class="card_m1">￥{{item.price_yh}}</text>
+        <text class="card_m2">￥{{item.price}}</text>
+      </view>
+      <view class="card_m">
+        <text>新品推荐</text>
+        <text>销量：{{item.shiyong}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 按钮 -->
+<view class="flex flex-direction but_wr">
+  <button class="but" bindtap="ss">点击查看更多</button>
+</view>

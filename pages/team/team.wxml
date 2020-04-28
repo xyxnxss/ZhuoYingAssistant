@@ -1,0 +1,39 @@
+<!--pages/team/team.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">我的团队</view>
+</cu-custom>
+<!-- 标签页 -->
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="一级">
+    <view class="title">一级用户数量{{data.length}}</view>
+    <view class="cu-list menu-avatar">
+      <view class="cu-item" wx:for='{{data}}' wx:key='key'>
+        <view class="cu-avatar radius lg">
+          <image src="{{item.photo}}" class="t_img"></image>
+        </view>
+        <view class="content">
+          <text class="text-cut">用户名：{{item.name}}</text>
+          <view class="text-gray text-sm flex">
+            <text class="text-cut">手机号：{{item.tel}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="二级">
+    <view class="title">二级用户数量{{data.length}}</view>
+    <view class="cu-list menu-avatar">
+      <view class="cu-item" wx:for='{{data}}' wx:key='key'>
+        <view class="cu-avatar radius lg">
+          <image src="{{item.photo}}" class="t_img"></image>
+        </view>
+        <view class="content">
+          <text class="text-cut">用户名：{{item.name}}</text>
+          <view class="text-gray text-sm flex">
+            <text class="text-cut">手机号：{{item.tel}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>

@@ -1,0 +1,57 @@
+<!--pages/address/address.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">收货地址</view>
+</cu-custom>
+<!-- 地址 -->
+<form class="warp" bindsubmit="formSubmit">
+  <!-- 姓名 -->
+  <view class="cu-form-group">
+    <input placeholder="收货人姓名" name='xingming'></input>
+  </view>
+  <!-- 电话 -->
+  <view class="cu-form-group">
+    <input placeholder="电话号码" name='dianhua'></input>
+    <view class="cu-capsule radius">
+      <view class="cu-tag bg-blue">
+        +86
+      </view>
+      <view class="cu-tag line-blue">
+        中国大陆
+      </view>
+    </view>
+  </view>
+  <!-- 地址 -->
+  <view class="cu-form-group" >
+		<view class="title">选择省份</view>
+		<picker bindchange="PickerChange1" value="{{index}}" range="{{se}}" >
+    <view class="picker">
+				{{index1?se[index1]:'请选择'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">选择城市</view>
+		<picker bindchange="PickerChange2" value="{{index}}" range="{{sec}}">
+    <view class="picker">
+				{{index2?sec[index2]:'请选择'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">选择地区</view>
+		<picker bindchange="PickerChange3" value="{{index}}" range="{{seca}}">
+    <view class="picker">
+				{{index3?seca[index3]:'请选择'}}
+			</view>
+		</picker>
+	</view>
+  <!-- 备注 -->
+  <view class="cu-form-group align-start">
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" placeholder="备注信息"name='beizu'></textarea>
+  </view>
+  <!-- 按钮 -->
+<view class="butt">
+  <button class="cu-btn bg-gradual-blue" formType="submit">保存地址</button>
+</view>
+</form>

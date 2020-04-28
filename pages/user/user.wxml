@@ -1,0 +1,50 @@
+<!--pages/user/user.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">个人中心</view>
+</cu-custom>
+<!-- 信息 -->
+<view class="wrap bg-gradual-blue">
+  <view class="wrap_img">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName"></open-data>
+</view>
+<!-- 功能 -->
+<view class="contents">
+  <view>
+    <navigator url="../empower/empower">
+      <image src="/images/mine_shouquan.png" class="con_img"></image>
+      <view>授权登录</view>
+    </navigator>
+  </view>
+  <view>
+    <navigator url="../empowerPhone/empowerPhone">
+      <image src="/images/mine_phone.png" class="con_img"></image>
+      <view>绑定手机</view>
+    </navigator>
+  </view>
+  <view>
+    <navigator url="../empowerPhone/empowerPhone">
+      <image src="/images/mine_jifen.png" class="con_img"></image>
+      <view>积分兑换</view>
+    </navigator>
+  </view>
+  <view>
+    <image src="/images/mine_dingdan.png" class="con_img"></image>
+    <view>我的订单</view>
+  </view>
+  <view bindtap="addphone">
+    <image src="/images/mine_xinzeng.png" class="con_img"></image>
+    <view>新增联系人</view>
+  </view>
+  <view bindtap="phone">
+    <image src="/images/mine_zhixun.png" class="con_img"></image>
+    <view>咨询电话</view>
+  </view>
+  <view>
+    <navigator url="../map/map">
+      <image src="/images/mine_daohang.png" class="con_img"></image>
+      <view>地图导航</view>
+    </navigator>
+  </view>
+</view>

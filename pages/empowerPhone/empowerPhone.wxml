@@ -1,0 +1,13 @@
+<!--pages/empowerPhone/empowerPhone.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">绑定手机</view>
+</cu-custom>
+<view class="wrap">
+  <view class="wrap_cen">
+    <image src='/images/sj.png' class="img"></image>
+    <text class="blo">微信绑定手机页面</text>
+    <text>此页面是微信绑定手机页面，点击下方按钮弹出授权或跳转页面</text>
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="but">点击绑定手机</button>
+  </view>
+</view>

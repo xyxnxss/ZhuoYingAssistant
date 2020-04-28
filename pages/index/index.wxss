@@ -1,0 +1,70 @@
+/* pages/zhuoyuezhushou/zhuoyue.wxss */
+
+.tower-swiper .tower-item {
+  transform: scale(calc(0.5 + var(--index) / 10));
+  margin-left: calc(var(--left) * 100rpx - 150rpx);
+  z-index: var(--index);
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15rpx;
+}
+
+.prolist {
+  width: 40vw;
+  margin: 20rpx;
+}
+
+.card>view {
+  border: 1px solid gainsboro;
+  width: 42.5vw;
+}
+
+.card_img {
+  display: flex;
+  justify-content: center;
+}
+
+.card_img image {
+  width: 100%;
+}
+
+.wrap {
+  padding: 10rpx;
+}
+
+.card_m {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+  color: gray;
+  font-size: 25rpx;
+}
+
+.card_m1 {
+  color: red;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.card_m2 {
+  text-decoration: line-through;
+}
+
+.but_wr {
+  padding: 20rpx 50rpx;
+}
+
+.but {
+  background-color: white;
+  font-size: 25rpx;
+  padding: 0rpx 100rpx;
+}
+
+.kuang {
+  display: flex;
+  justify-content: center;
+}

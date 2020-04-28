@@ -1,0 +1,41 @@
+<!--pages/order/order.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText" bindtap="fan">返回</view>
+  <view slot="content">订单确认</view>
+</cu-custom>
+<!-- 内容 -->
+<view class="wrap">
+  <!-- 订单 -->
+  <view class="xl_wrap">
+    <image src="{{pro.photo_x}}" class="xl_img"></image>
+    <view class="xl_flex">
+      <text class="xl_t1">{{pro.name}}</text>
+      <text class="xl_t2">￥ {{pro.price_yh}}</text>
+      <text class="xl_t3">数量：{{num}}</text>
+    </view>
+  </view>
+  <!-- 默认地址 -->
+  <view class="list">
+<text>姓名：{{adds_s.name}}</text>
+<text>手机号：{{adds_s.tel}}</text>
+<text>默认地址：{{adds_s.address}}</text>
+</view>
+  <!-- 添加地址 -->
+  <navigator url="../../pages/auth/auth" class="diz">
+    <image src="../../images/ioc.png" class="diz_img"></image>
+    <text>添加收货地址</text>
+  </navigator>
+  <!-- 备注 -->
+  <textarea placeholder="备注"></textarea>
+  <!-- 金额 -->
+  <view class="flex solid-bottom padding justify-center">
+    <view class="jine">
+      应共支付：
+      <text>￥{{he}}</text>
+    </view>
+  </view>
+  <!-- 按钮 -->
+  <view class="flex flex-direction">
+    <button class="cu-btn bg-foeninus lg" bindtap="pay">线下支付</button>
+  </view>
+</view>
